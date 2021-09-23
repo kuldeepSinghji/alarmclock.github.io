@@ -117,7 +117,7 @@ let clearAlarm = document.getElementById("clearbutton");
                 if (hour > 12) {
                     hour = hour - 12;
                 }
-                hour = (hour < 10) ? "0" + hour : hour;
+//                 hour = (hour < 10) ? "0" + hour : hour;
                 minute = (minute < 10) ? "0" + minute : minute;
                 second = (second < 10) ? "0" + second : second;
 
@@ -126,7 +126,7 @@ let clearAlarm = document.getElementById("clearbutton");
                 console.log(currentTime)
                 if (alarmTime == currentTime) {
                     let setAlarm = document.getElementById("setalarm");
-                    setalarm.className = "active";
+                    setAlarm.className = "active";
                     ringBell();
                 }
 

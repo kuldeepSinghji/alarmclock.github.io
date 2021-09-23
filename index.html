@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="time">
+            <div class="hours">
+                <small id="hours"></small>
+            </div>
+            <div class="minutes">
+                <small id="minutes"></small>
+            </div>
+            <div class="seconds">
+                <small id="seconds"></small>
+            </div>
+            <div class="session">
+                <small id="session"></small>
+            </div>
+        </div>
+        <div class="form">
+            <form action="#">
+                <label for="selectHour">Hours</label>
+                <select name="hour" id="selectHour">
+                </select>
+                <label for="selectMinute">Minutes</label>
+                <select name="minute" id="selectMinute">
+                </select>
+                <label for="selectSecond">Seconds</label>
+                <select name="second" id="selectSecond">
+                </select>
+                <label for="selectSession">Session</label>
+                <select name="session" id="selectSession">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+                <div class="btn">
+                    <button type="submit" id="btn">Set Alarm</button>
+                </div>
+            </form>
+            <div class="setAlarm">
+                <small id="setalarm">00:00:00AM</small>
+            </div>
+            <div class="clearAlarm">
+                <button id="clearbutton">Clear Alarm</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

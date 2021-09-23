@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #001;
+    color: white;
+}
+
+.container {
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time {
+    background: linear-gradient(to top, #008aff, #008aff, #00ffe7, #00ffe7, orange, orange, magenta, magenta);
+    animation: animate 10s linear infinite;
+    animation-delay: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10.7em;
+    margin-top: -190px;
+    margin-bottom: 50px;
+}
+
+.hours {
+    background: #001;
+    mix-blend-mode: multiply;
+    border: 8px solid pink;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.minutes {
+    background: #001;
+    mix-blend-mode: multiply;
+}
+
+.seconds {
+    background: #001;
+    mix-blend-mode: multiply;
+}
+
+.seconds small {
+    background: #001;
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+
+    100% {
+        filter: hue-rotate(720deg);
+    }
+}
+
+.session {
+    mix-blend-mode: multiply;
+    background: #001;
+    padding-left: 20px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.form select {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    border: 3px solid magenta;
+    border-radius: 5px;
+    font-weight: 900;
+    cursor: pointer;
+    padding-left: 12px;
+    color: #fff;
+    background: #001;
+    -webkit-box-reflect: below 4px linear-gradient(transparent, #0004);
+
+}
+
+.form select option {
+    text-align: center;
+    color: #001;
+    font-weight: 900;
+
+}
+
+.form label {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    text-decoration: underline;
+
+}
+
+.form label[for="selectHour"] {
+    color: magenta;
+    border-bottom: 3px solid magenta;
+}
+
+.form label[for="selectMinute"] {
+    color: orange;
+    border-bottom: 3px solid orange;
+}
+
+.form label[for="selectSecond"] {
+    color: greenyellow;
+    border-bottom: 3px solid greenyellow;
+}
+
+.form label[for="selectSession"] {
+    color: cyan;
+    border-bottom: 3px solid cyan;
+}
+
+.form select[name="hour"] {
+    border: 2px solid magenta;
+}
+
+.form select[name="minute"] {
+    border: 2px solid orange;
+}
+
+.form select[name="second"] {
+    border: 2px solid greenyellow;
+}
+
+.form select[name="session"] {
+    border: 2px solid cyan;
+}
+
+.form select:hover {
+    color: #001;
+    background: #ccc;
+}
+
+.form select:focus {
+    background: white;
+    color: #001;
+}
+
+.btn {
+    border: 2px solid cyan;
+    margin-top: 80px;
+    border-radius: 7px;
+}
+
+.btn button {
+    height: 35px;
+    width: 100%;
+    background: linear-gradient(to right, #008aff, #008aff, #00ffe7, #00ffe7, magenta, magenta);
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 7px;
+    font-family: cursive;
+
+}
+
+.btn button:hover {
+    background: linear-gradient(to right, #00ffe7, #00ffe7, magenta, magenta, #008aff, #008aff);
+
+}
+
+.btn button:active {
+    color: white;
+}
+
+.setAlarm {
+    position: absolute;
+    left: 30%;
+    bottom: 100px;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.setAlarm small {
+    text-decoration: underline;
+}
+
+.clearAlarm {
+    position: absolute;
+    bottom: 100px;
+    right: 30%;
+    width: 200px;
+    height: 33px;
+    border: 2px solid cyan;
+    border-radius: 5px;
+}
+
+.clearAlarm button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: cursive;
+    font-weight: 600;
+    background: cyan;
+    box-shadow: 0px 0px 2px 4px cyan;
+    ;
+}
+
+.clearAlarm button:hover {
+    transition: all;
+    transition-duration: .3;
+    box-shadow: 0px 0px 2px 4px magenta;
+    background: magenta;
+}
+
+.clearAlarm button:active {
+    box-shadow: 0px 0px 2px 4px white;
+    background: white;
+
+}
+
+.active {
+    animation: animi 1s linear infinite
+}
+
+@keyframes animi {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: white;
+    }
+}
+@media only screen and (max-width: 731px) {
+    .time{
+        font-size: 4.7em;
+    }
+    .form{
+        display: block;
+        width: 70%;
+    }
+    .form label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: none;
+    }
+    .form select{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    .form label[for="selectHour"] {
+        color: magenta;
+        border-bottom: none;
+    }
+    
+    .form label[for="selectMinute"] {
+        color: orange;
+        border-bottom: none;
+    }
+    
+    .form label[for="selectSecond"] {
+        color: greenyellow;
+        border-bottom: none;
+    }
+    
+    .form label[for="selectSession"] {
+        color: cyan;
+        border-bottom: none;
+    }
+    .btn{
+        margin-top: 30px;
+    }
+    .setAlarm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+       .clearAlarm{
+           bottom: 30px;
+           display: flex;
+           justify-content: center;
+           width: 200px;
+           left: 25%;
+       }
+    .clearAlarm button{
+        height: 33px;
+        border: 2px solid cyan;
+        border-radius: 5px;
+    }
+    .form select option{
+        font-size: 12px;
+        height: 10px;
+    }
+       
+}
